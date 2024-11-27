@@ -2,6 +2,7 @@ package main
 
 import (
 	"github.com/Xarth-Mai/iBlogGo/handlers"
+	"log"
 	"net/http"
 )
 
@@ -21,8 +22,5 @@ func main() {
 
 	// 启动服务器
 	println("服务器启动在 http://localhost:8080")
-	err := http.ListenAndServe(":8080", nil)
-	if err != nil {
-		panic(err)
-	}
+	log.Fatal(http.ListenAndServe(":8080", nil))
 }

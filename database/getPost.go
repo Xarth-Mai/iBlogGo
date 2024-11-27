@@ -16,9 +16,28 @@ func GetTestPost(id string) (models.Post, error) {
 		ID:      2,
 		Title:   "This is the second title of the post",
 	}
-	if id == "1" {
+	testPost3 := models.Post{
+		Content: "This is the content of the third post",
+		Date:    "2023-05-07",
+		ID:      3,
+		Title:   "This is the third title of the post",
+	}
+	testPost4 := models.Post{
+		Content: "This is the content of the fourth post",
+		Date:    "2023-05-08",
+		ID:      4,
+		Title:   "This is the fourth title of the post",
+	}
+	switch id {
+	case "1":
 		return testPost1, nil
-	} else {
+	case "2":
 		return testPost2, nil
+	case "3":
+		return testPost3, nil
+	case "4":
+		return testPost4, nil
+	default:
+		return testPost1, nil
 	}
 }

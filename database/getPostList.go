@@ -14,9 +14,21 @@ func GetTestPostList() (models.List, error) {
 		ID:    2,
 		Title: "This is the second title of the post",
 	}
+	testPost3 := models.Posts{
+		Date:  "2023-05-07",
+		ID:    3,
+		Title: "This is the third title of the post",
+	}
+	testPost4 := models.Posts{
+		Date:  "2023-05-08",
+		ID:    4,
+		Title: "This is the fourth title of the post",
+	}
 	testlist := models.List{
 		testPost1,
 		testPost2,
+		testPost3,
+		testPost4,
 	}
 	return testlist, nil
 }
