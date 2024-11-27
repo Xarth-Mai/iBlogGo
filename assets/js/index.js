@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 // 填充卡片内容
                 card.innerHTML = `
                     <h2>${updatedPost.title}</h2>
-                    <p>Date: ${formattedDate}</p>
+                    <p>${formattedDate}</p>
                     <p><a href="/blog/${updatedPost.id}">Read more...</a></p>
                 `;
 

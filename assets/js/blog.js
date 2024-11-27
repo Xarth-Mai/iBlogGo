@@ -4,11 +4,11 @@ document.addEventListener("DOMContentLoaded", function () {
         id: 1,
         title: "Default Title",
         content: "Default Content",
-        date: "2023-09-15T00:00:00Z" // 默认时间
+        date: "2023-09-15T00:00:00+00:00" // 默认时间
     };
 
     const path = window.location.pathname;
-    const postId = path.split('/').pop(); // 获取 URL 中的博客 ID
+    const postId = path.split('/').pop() || 1; // 获取 URL 中的博客 ID，如果没有则默认为 1
 
     fetch(`/post/${postId}`)
         .then(response => response.json())
