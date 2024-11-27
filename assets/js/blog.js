@@ -14,7 +14,10 @@ document.addEventListener("DOMContentLoaded", function () {
         .then(response => response.json())
         .then(post => {
             // 合并模板和获取的数据
-            const updatedPost = { ...postTemplate, ...post };
+            const updatedPost = {...postTemplate, ...post};
+
+            // 修改 HTML 标题
+            document.title = updatedPost.title;
 
             // 填充页面内容
             document.getElementById("post-title").innerText = updatedPost.title;
