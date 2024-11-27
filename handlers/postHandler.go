@@ -3,12 +3,13 @@ package handlers
 import (
 	"github.com/Xarth-Mai/iBlogGo/database"
 	"github.com/Xarth-Mai/iBlogGo/utils"
+	"gorm.io/gorm"
 	"log"
 	"net/http"
 )
 
-// PostHandler 获取文章
-func PostHandler(w http.ResponseWriter, r *http.Request) {
+// PostHandler 处理文章HTTP请求
+func PostHandler(w http.ResponseWriter, r *http.Request, db *gorm.DB) {
 	id := r.URL.Path
 	id = id[len("/blog/"):]
 	if id == "" {
@@ -17,7 +18,7 @@ func PostHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	// 从数据库中获取文章
-	post, err := database.GetTestPost(id)
+	post, err := database.GetPost(db, id)
 	if err != nil {
 		log.Printf("Failed to get post: %v", err)
 		http.Error(w, "Internal Server Error", http.StatusInternalServerError)

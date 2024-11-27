@@ -1,42 +1,36 @@
-/* 全局暗黑模式设置 */
 body {
-    background-color: #121212; /* 深色背景 */
-    color: #e0e0e0; /* 浅色文字 */
-    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
     margin: 0;
     padding: 20px;
     line-height: 1.6;
 }
 
-/* 标题样式 */
 #post-title {
     font-size: 2.5rem;
-    color: #ffffff; /* 白色标题 */
+    color: #ffffff;
     text-align: center;
     margin-bottom: 10px;
 }
 
-/* 日期样式 */
 #post-date {
     font-size: 1rem;
-    color: #b0b0b0; /* 灰色日期 */
+    color: #b0b0b0;
     text-align: center;
     margin-bottom: 20px;
 }
 
-/* 文章内容样式 */
 #post-content {
     font-size: 1.1rem;
     line-height: 1.8;
     padding: 20px;
-    background-color: #1e1e1e; /* 深灰色背景 */
+    background-color: #1e1e1e;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* 添加阴影 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
-/* 链接样式 */
 a {
-    color: #1e90ff; /* 蓝色链接 */
+    color: #4ea8de;
     text-decoration: none;
 }
 
