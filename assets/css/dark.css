@@ -1,0 +1,140 @@
+/* 基本样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #121212; /* 暗黑背景 */
+    color: #e0e0e0; /* 浅灰色文本 */
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+a {
+    color: #bb86fc; /* 暗紫色链接 */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #3700b3; /* 深紫色悬停 */
+}
+
+/* 标题样式 */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    margin-bottom: 0.5em;
+    color: #ffffff; /* 白色标题 */
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+/* 主要内容区域 */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+ul {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+li {
+    margin-bottom: 1rem;
+}
+
+/* 按钮样式 */
+button {
+    background-color: #6200ea; /* 按钮背景颜色 */
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #3700b3; /* 悬停时深紫色 */
+}
+
+button:focus {
+    outline: none;
+}
+
+/* 输入框样式 */
+input, textarea {
+    background-color: #333333;
+    color: #e0e0e0;
+    border: 1px solid #444;
+    padding: 0.8rem;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: #6200ea; /* 聚焦时的蓝紫色边框 */
+    outline: none;
+}
+
+/* 卡片样式 */
+.card {
+    background-color: #1f1f1f;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.card h2 {
+    margin-bottom: 1rem;
+}
+
+.card p {
+    font-size: 1rem;
+}
+
+/* 背景和段落样式 */
+section {
+    margin-top: 2rem;
+}
+
+p {
+    margin-bottom: 1.5rem;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    h3 {
+        font-size: 1.2em;
+    }
+}
