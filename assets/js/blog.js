@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
     // post 模板
     const postTemplate = {
-        id: 1,
+        id: 0,
         title: "Default Title",
         content: "Default Content",
-        date: "2023-09-15T00:00:00+00:00" // 默认时间
+        date: "2050-10-10T00:00:00+00:00" // 默认时间
     };
 
     const path = window.location.pathname;
@@ -32,8 +32,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // 填充页面内容
             document.getElementById("post-title").innerText = updatedPost.title;
-            document.getElementById("post-date").innerText = formattedDate; // 显示格式化后的日期
-            document.getElementById("post-content").innerText = updatedPost.content;
+            document.getElementById("post-date").innerText = formattedDate;
+            document.getElementById("post-content").innerHTML = updatedPost.content;
+
+            // 高亮代码
+            hljs.highlightAll();
         })
         .catch(err => console.log('Error fetching blog post:', err));
 });

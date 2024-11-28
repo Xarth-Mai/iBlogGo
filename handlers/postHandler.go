@@ -25,6 +25,9 @@ func PostHandler(w http.ResponseWriter, r *http.Request, db *gorm.DB) {
 		return
 	}
 
+	// 解析Markdown格式文章
+	post.Content = utils.ParseMarkdown(post.Content)
+
 	// 将文章转换为JSON格式并写入响应
 	w.Header().Set("Content-Type", "application/json")
 	_, err = w.Write([]byte(utils.ToJson(&post)))
