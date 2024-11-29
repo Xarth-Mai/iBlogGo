@@ -9,8 +9,6 @@ import (
 func GetPost(db *gorm.DB, id string) (models.Post, error) {
 	var post models.Post
 	// 查找指定 ID 的文章
-	if err := db.Find(&post, id).Error; err != nil {
-		return post, err
-	}
-	return post, nil
+	err := db.Find(&post, id).Error
+	return post, err
 }
