@@ -10,12 +10,7 @@ import (
 
 // PostHandler 处理文章HTTP请求
 func PostHandler(w http.ResponseWriter, r *http.Request, db *gorm.DB) {
-	id := r.URL.Path
-	id = id[len("/blog/"):]
-	if id == "" {
-		http.NotFound(w, r)
-		return
-	}
+	id := r.PathValue("id")
 
 	// 从数据库中获取文章
 	post, err := database.GetPost(db, id)

@@ -30,7 +30,7 @@ func main() {
 	})
 
 	// 博客文章JSON
-	http.HandleFunc("/post/", func(w http.ResponseWriter, r *http.Request) {
+	http.HandleFunc("/post/{id}", func(w http.ResponseWriter, r *http.Request) {
 		handlers.PostHandler(w, r, db)
 	})
 
