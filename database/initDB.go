@@ -2,7 +2,7 @@ package database
 
 import (
 	"github.com/Xarth-Mai/iBlogGo/models"
-	"gorm.io/driver/sqlite"
+	"github.com/glebarez/sqlite"
 	"gorm.io/gorm"
 	"time"
 )
