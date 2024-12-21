@@ -10,6 +10,8 @@ import (
 
 func main() {
 
+	port := "6102"
+
 	// 初始化数据库连接
 	db, err := database.InitDB()
 	if err != nil {
@@ -35,6 +37,7 @@ func main() {
 	})
 
 	// 启动服务器
-	println("Server started at http://localhost:8080")
-	log.Fatal(http.ListenAndServe(":8080", nil))
+	addr := fmt.Sprintf("127.0.0.1:%s", port)
+	println("Server started at http://" + addr)
+	log.Fatal(http.ListenAndServe(addr, nil))
 }
