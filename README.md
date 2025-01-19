@@ -10,11 +10,11 @@ A lightweight blog system built entirely with Go
 ### 🚀 Backend  
 - **Language**: Go  
 
-- **Database**: SQLite  
+- **Database**: [SQLite](https://github.com/glebarez/sqlite)  
 
-- **ORM**: GORM  
+- **ORM**: [GORM](https://gorm.io/)  
 
-- **Markdown Parser**: Blackfriday  
+- **Markdown Parser**: [Blackfriday](https://github.com/russross/blackfriday)  
 
 ### 🌐 Frontend  
 - **JavaScript**  
@@ -24,7 +24,7 @@ A lightweight blog system built entirely with Go
 - **Markdown Styling**: [GitHub Markdown CSS](https://github.com/sindresorhus/github-markdown-css)  
   Provides GitHub-style Markdown rendering for consistent and clean formatting.  
 
-- **Code Syntax Highlighting**: [highlight.js](https://github.com/highlightjs/highlight.js)  
+- **Code Syntax Highlighting**: [Highlight.js](https://github.com/highlightjs/highlight.js)  
   Enables syntax highlighting for code blocks, improving readability and developer experience.  
 
 ---
